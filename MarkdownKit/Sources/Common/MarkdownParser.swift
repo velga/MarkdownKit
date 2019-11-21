@@ -146,7 +146,6 @@ open class MarkdownParser {
 
   fileprivate func updateDefaultElements() {
     let pairs: [(EnabledElements, MarkdownElement)] = [
-      (.automaticLink, automaticLink),
       (.header, header),
       (.list, list),
       (.quote, quote),
@@ -154,7 +153,8 @@ open class MarkdownParser {
       (.bold, bold),
       (.italic, italic),
       (.code, code),
-      (.strikethrough, strikethrough)
+      (.strikethrough, strikethrough),
+      (.automaticLink, automaticLink)
       ]
     defaultElements = pairs.filter({ (enabled, _) in
       enabledElements.contains(enabled) })
