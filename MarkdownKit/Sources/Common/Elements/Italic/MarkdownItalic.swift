@@ -27,7 +27,7 @@ open class MarkdownItalic: MarkdownCommonElement {
         attributedString.deleteCharacters(in: match.range(at: 4))
         // formatting string (may alter the length)
         // check if font is bold already:
-        let stringAttributes = attributedString.attributes(at: 0, longestEffectiveRange: nil, in: match.range(at: 3))
+        let stringAttributes = attributedString.attributes(at: match.range(at: 3).location, longestEffectiveRange: nil, in: match.range(at: 3))
         addAttributes(attributedString, range: match.range(at: 3))
         if let font = font,
             let stringFont = stringAttributes[.font] as? UIFont,
