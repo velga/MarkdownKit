@@ -150,10 +150,10 @@ open class MarkdownParser {
       (.list, list),
       (.quote, quote),
       (.link, link),
+      (.strikethrough, strikethrough),
       (.bold, bold),
       (.italic, italic),
       (.code, code),
-      (.strikethrough, strikethrough),
       (.automaticLink, automaticLink)
       ]
     defaultElements = pairs.filter({ (enabled, _) in
