@@ -30,10 +30,12 @@ open class MarkdownItalic: MarkdownCommonElement {
         let stringAttributes = attributedString.attributes(at: match.range(at: 3).location, longestEffectiveRange: nil, in: match.range(at: 3))
         addAttributes(attributedString, range: match.range(at: 3))
         if let font = font,
-            let stringFont = stringAttributes[.font] as? UIFont,
-            stringFont.fontDescriptor.symbolicTraits.contains(.traitBold),
-            let boldItalicFont = font.withTraits(.traitBold, .traitItalic) {
-            attributedString.addAttributes([NSAttributedString.Key.font: boldItalicFont], range: match.range(at: 3))
+            let stringFont = stringAttributes[.font] as? MarkdownFont {
+            let fontSize: CGFloat = stringFont.fontDescriptor.pointSize
+            var italicFont: MarkdownFont = font.withSize(fontSize)
+            let fontTraits = stringFont.fontDescriptor.symbolicTraits
+            italicFont = italicFont.withTraits(fontTraits, .traitItalic) ?? italicFont
+            attributedString.addAttributes([NSAttributedString.Key.font: italicFont], range: match.range(at: 3))
         }
         // deleting leading markdown
         attributedString.deleteCharacters(in: match.range(at: 2))
