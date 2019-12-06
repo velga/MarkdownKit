@@ -9,7 +9,7 @@ import Foundation
 
 open class MarkdownQuote: MarkdownLevelElement {
 
-  fileprivate static let regex = "^(\\>)\\s*(.+)$"
+  fileprivate static let regex = "^([\\>]{1,%@})\\s+(.+)$"
 
   open var maxLevel: Int
   open var fontIncrease: CGFloat
@@ -30,6 +30,10 @@ open class MarkdownQuote: MarkdownLevelElement {
     self.backgroundColor = backgroundColor
   }
   
+  public func addAttributes(_ attributedString: NSMutableAttributedString, range: NSRange, level: Int) {
+    attributedString.addAttributes(attributesForLevel(level), range: range)
+  }
+  
   public func attributesForLevel(_ level: Int) -> [NSAttributedString.Key : AnyObject] {
     var codeAttributes = attributes
     
@@ -41,8 +45,9 @@ open class MarkdownQuote: MarkdownLevelElement {
     }
     
     let paragraphStyle = NSMutableParagraphStyle()
-    paragraphStyle.headIndent = 20
-    paragraphStyle.tabStops = [NSTextTab(textAlignment: .left, location: paragraphStyle.headIndent, options: [:])]
+    let headIndent = CGFloat(10 * level)
+    paragraphStyle.firstLineHeadIndent = headIndent
+    paragraphStyle.headIndent = headIndent
     codeAttributes[.paragraphStyle] = paragraphStyle
     
     return codeAttributes
@@ -50,9 +55,7 @@ open class MarkdownQuote: MarkdownLevelElement {
   
   public func formatText(_ attributedString: NSMutableAttributedString, range: NSRange, level: Int) {
     attributedString.deleteCharacters(in: range)
-    let tab = NSAttributedString(string: "\t", attributes: attributedString.attributes(at: 0, effectiveRange: nil))
     let newLine = NSAttributedString(string: "\n", attributes: attributedString.attributes(at: 0, effectiveRange: nil))
-    attributedString.insert(tab, at: 0)
     attributedString.append(newLine)
   }
 }
