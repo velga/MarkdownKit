@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		354E1AE7F8A6582615E761F5 /* Pods_Example_AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44808A771005F320A076CA59 /* Pods_Example_AppKit.framework */; };
 		3EB3627D23154D90005D48C8 /* MarkdownStrikethrough.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB3627C23154D90005D48C8 /* MarkdownStrikethrough.swift */; };
+		9826790723F2E53B0038F23D /* MarkdownStrikethrough.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB3627C23154D90005D48C8 /* MarkdownStrikethrough.swift */; };
 		9E5A24F1B38B986D07AD63D1 /* Pods_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F52B0A5C8C127FBD3FEEC91A /* Pods_Example.framework */; };
 		B62C1BEB21EF7D8D00308C8C /* String+HTMLDecode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62C1BE221EF7D8C00308C8C /* String+HTMLDecode.swift */; };
 		B62C1BEC21EF7D8D00308C8C /* MarkdownSubreddit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62C1BE321EF7D8C00308C8C /* MarkdownSubreddit.swift */; };
@@ -84,7 +85,6 @@
 		3EB3627C23154D90005D48C8 /* MarkdownStrikethrough.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownStrikethrough.swift; sourceTree = "<group>"; };
 		44808A771005F320A076CA59 /* Pods_Example_AppKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example_AppKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		53C5892615913D5AFC9420DD /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
-		9801D7CF238697E200D4C40F /* MarkdownStrikethrough.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownStrikethrough.swift; sourceTree = "<group>"; };
 		A90AF72A45197DB0B276846B /* Pods-Example-Appkit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example-Appkit.release.xcconfig"; path = "Target Support Files/Pods-Example-Appkit/Pods-Example-Appkit.release.xcconfig"; sourceTree = "<group>"; };
 		B468AF6EE53A9104B5A0D1C8 /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Example/Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
 		B62C1BAD21EF7C8000308C8C /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -897,7 +897,7 @@
 				B64AF61C220340360048439D /* MarkdownParser.swift in Sources */,
 				B64AF62C220340BC0048439D /* MarkdownLevelElement.swift in Sources */,
 				B64AF6282203408F0048439D /* MarkdownUnescaping.swift in Sources */,
-				9801D7D1238697E700D4C40F /* MarkdownStrikethrough.swift in Sources */,
+				9826790723F2E53B0038F23D /* MarkdownStrikethrough.swift in Sources */,
 				B64AF61E220340520048439D /* MarkdownQuote.swift in Sources */,
 				B64AF61D2203403A0048439D /* String+UTF16.swift in Sources */,
 				B64AF62D220340BF0048439D /* MarkdownElement.swift in Sources */,
