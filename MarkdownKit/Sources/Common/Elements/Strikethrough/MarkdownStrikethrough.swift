@@ -1,15 +1,15 @@
 //
 //  MarkdownStrikethrough.swift
-//  MarkdownKit
+//  Pods
 //
-//  Created by Vladyslava Kirichenko on 21.11.19.
-//  Copyright © 2019 Ivan Bruel. All rights reserved.
+//  Created by _ on _.
+//
 //
 
 import Foundation
 
 open class MarkdownStrikethrough: MarkdownCommonElement {
-    fileprivate static let regex = "(.?|^)(~~)(.+?)(\\2)"
+    fileprivate static let regex = "(.?|^)(\\~\\~|__)(?=\\S)(.+?)(?<=\\S)(\\2)"
     
     open var font: MarkdownFont?
     open var color: MarkdownColor?
