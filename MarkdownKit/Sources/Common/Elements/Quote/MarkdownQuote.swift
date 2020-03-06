@@ -55,7 +55,5 @@ open class MarkdownQuote: MarkdownLevelElement {
   
   public func formatText(_ attributedString: NSMutableAttributedString, range: NSRange, level: Int) {
     attributedString.deleteCharacters(in: range)
-    let newLine = NSAttributedString(string: "\n", attributes: attributedString.attributes(at: 0, effectiveRange: nil))
-    attributedString.append(newLine)
   }
 }
