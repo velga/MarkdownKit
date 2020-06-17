@@ -14,7 +14,6 @@ open class MarkdownList: MarkdownLevelElement {
   open var maxLevel: Int
   open var font: MarkdownFont?
   open var color: MarkdownColor?
-  open var separator: String
   open var indicator: String
 
   open var regex: String {
@@ -23,19 +22,26 @@ open class MarkdownList: MarkdownLevelElement {
   }
 
   public init(font: MarkdownFont? = nil, maxLevel: Int = 0, indicator: String = "•",
-              separator: String = "  ", color: MarkdownColor? = nil) {
+              color: MarkdownColor? = nil) {
     self.maxLevel = maxLevel
     self.indicator = indicator
-    self.separator = separator
     self.font = font
     self.color = color
   }
 
   open func formatText(_ attributedString: NSMutableAttributedString, range: NSRange, level: Int) {
-    var string = (0..<level).reduce("") { (string, _) in
-        "\(string)\(separator)"
-    }
-    string = "\(string)\(indicator) "
-    attributedString.replaceCharacters(in: range, with: string)
+    let levelIndicatorList = [1: "\(indicator) ", 2: "\(indicator) ", 3: "◦ ", 4: "◦ ", 5: "▪︎ ", 6: "▪︎ "]
+    guard let indicatorIcon = levelIndicatorList[level] else { return }
+    attributedString.replaceCharacters(in: range, with: indicatorIcon)
+    attributedString.addAttributes([.paragraphStyle : defaultParagraphStyle(level: level)], range: range)
+  }
+
+  private func defaultParagraphStyle(level: Int) -> NSMutableParagraphStyle {
+    let indent = 4 + CGFloat(level * 4)
+    let paragraphStyle = NSMutableParagraphStyle()
+    paragraphStyle.firstLineHeadIndent = indent
+    paragraphStyle.headIndent = indent + 10
+    paragraphStyle.paragraphSpacing = 4
+    return paragraphStyle
   }
 }
