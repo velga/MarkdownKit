@@ -10,6 +10,8 @@
 		354E1AE7F8A6582615E761F5 /* Pods_Example_AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44808A771005F320A076CA59 /* Pods_Example_AppKit.framework */; };
 		3EB3627D23154D90005D48C8 /* MarkdownStrikethrough.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB3627C23154D90005D48C8 /* MarkdownStrikethrough.swift */; };
 		9826790723F2E53B0038F23D /* MarkdownStrikethrough.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB3627C23154D90005D48C8 /* MarkdownStrikethrough.swift */; };
+		98BA638C249B87520001FFE3 /* MarkdownOrderedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BA638B249B87520001FFE3 /* MarkdownOrderedList.swift */; };
+		98BA638D249B87520001FFE3 /* MarkdownOrderedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BA638B249B87520001FFE3 /* MarkdownOrderedList.swift */; };
 		9E5A24F1B38B986D07AD63D1 /* Pods_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F52B0A5C8C127FBD3FEEC91A /* Pods_Example.framework */; };
 		B62C1BEB21EF7D8D00308C8C /* String+HTMLDecode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62C1BE221EF7D8C00308C8C /* String+HTMLDecode.swift */; };
 		B62C1BEC21EF7D8D00308C8C /* MarkdownSubreddit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62C1BE321EF7D8C00308C8C /* MarkdownSubreddit.swift */; };
@@ -85,6 +87,7 @@
 		3EB3627C23154D90005D48C8 /* MarkdownStrikethrough.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownStrikethrough.swift; sourceTree = "<group>"; };
 		44808A771005F320A076CA59 /* Pods_Example_AppKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example_AppKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		53C5892615913D5AFC9420DD /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
+		98BA638B249B87520001FFE3 /* MarkdownOrderedList.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = MarkdownOrderedList.swift; sourceTree = "<group>"; tabWidth = 2; };
 		A90AF72A45197DB0B276846B /* Pods-Example-Appkit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example-Appkit.release.xcconfig"; path = "Target Support Files/Pods-Example-Appkit/Pods-Example-Appkit.release.xcconfig"; sourceTree = "<group>"; };
 		B468AF6EE53A9104B5A0D1C8 /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Example/Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
 		B62C1BAD21EF7C8000308C8C /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -190,6 +193,14 @@
 				3EB3627C23154D90005D48C8 /* MarkdownStrikethrough.swift */,
 			);
 			path = Strikethrough;
+			sourceTree = "<group>";
+		};
+		98BA638A249B872F0001FFE3 /* Ordered List */ = {
+			isa = PBXGroup;
+			children = (
+				98BA638B249B87520001FFE3 /* MarkdownOrderedList.swift */,
+			);
+			path = "Ordered List";
 			sourceTree = "<group>";
 		};
 		9CEAFB3D64DC33AB394392A3 /* Frameworks */ = {
@@ -485,6 +496,7 @@
 			children = (
 				B64AF60E22033EAA0048439D /* Quote */,
 				B64AF60D22033E120048439D /* List */,
+				98BA638A249B872F0001FFE3 /* Ordered List */,
 				B64AF60C22031ABD0048439D /* Bold */,
 				B64AF6092203198E0048439D /* Header */,
 				B64AF606220318670048439D /* Link */,
@@ -865,6 +877,7 @@
 				B672002A21EF8A96008649E1 /* MarkdownCommonElement.swift in Sources */,
 				B672002E21EF8A96008649E1 /* MarkdownStyle.swift in Sources */,
 				B672002921EF8A96008649E1 /* MarkdownItalic.swift in Sources */,
+				98BA638C249B87520001FFE3 /* MarkdownOrderedList.swift in Sources */,
 				3EB3627D23154D90005D48C8 /* MarkdownStrikethrough.swift in Sources */,
 				B64AF62F220340D90048439D /* Typealias.swift in Sources */,
 				B672001C21EF8A96008649E1 /* String+UTF16.swift in Sources */,
@@ -897,6 +910,7 @@
 				B64AF61C220340360048439D /* MarkdownParser.swift in Sources */,
 				B64AF62C220340BC0048439D /* MarkdownLevelElement.swift in Sources */,
 				B64AF6282203408F0048439D /* MarkdownUnescaping.swift in Sources */,
+				98BA638D249B87520001FFE3 /* MarkdownOrderedList.swift in Sources */,
 				9826790723F2E53B0038F23D /* MarkdownStrikethrough.swift in Sources */,
 				B64AF61E220340520048439D /* MarkdownQuote.swift in Sources */,
 				B64AF61D2203403A0048439D /* String+UTF16.swift in Sources */,

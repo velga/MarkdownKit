@@ -23,10 +23,12 @@ open class MarkdownParser {
     public static let italic        = EnabledElements(rawValue: 1 << 6)
     public static let code          = EnabledElements(rawValue: 1 << 7)
     public static let strikethrough = EnabledElements(rawValue: 1 << 8)
+    public static let orderedlist   = EnabledElements(rawValue: 1 << 9)
 
     public static let disabledAutomaticLink: EnabledElements = [
       .header,
       .list,
+      .orderedlist,
       .quote,
       .link,
       .bold,
@@ -51,6 +53,7 @@ open class MarkdownParser {
   // MARK: Basic Elements
   public let header: MarkdownHeader
   public let list: MarkdownList
+  public let orderedList: MarkdownOrderedList
   public let quote: MarkdownQuote
   public let link: MarkdownLink
   public let automaticLink: MarkdownAutomaticLink
@@ -94,6 +97,7 @@ open class MarkdownParser {
     
     header = MarkdownHeader(font: font)
     list = MarkdownList(font: font)
+    orderedList = MarkdownOrderedList(font: font)
     quote = MarkdownQuote(font: font)
     link = MarkdownLink(font: font)
     automaticLink = MarkdownAutomaticLink(font: font)
@@ -148,6 +152,7 @@ open class MarkdownParser {
     let pairs: [(EnabledElements, MarkdownElement)] = [
       (.header, header),
       (.list, list),
+      (.orderedlist, orderedList),
       (.quote, quote),
       (.link, link),
       (.strikethrough, strikethrough),
