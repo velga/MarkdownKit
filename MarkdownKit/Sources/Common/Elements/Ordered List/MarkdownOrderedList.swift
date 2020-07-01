@@ -10,7 +10,7 @@ import Foundation
 
 open class MarkdownOrderedList: MarkdownLevelElement {
 
-  fileprivate static let regex = "^([0-9].)\\s+(.+)$"
+  fileprivate static let regex = "^([0-9]\\.)\\s+(.+)$"
 
   open var maxLevel: Int
   open var font: MarkdownFont?
@@ -55,8 +55,7 @@ open class MarkdownOrderedList: MarkdownLevelElement {
   private func defaultParagraphStyle(level: Int) -> NSMutableParagraphStyle {
     let indent = 2 + CGFloat(level * 4)
     let paragraphStyle = NSMutableParagraphStyle()
-    paragraphStyle.firstLineHeadIndent = indent
-    paragraphStyle.headIndent = indent + 10
+    paragraphStyle.headIndent = indent + 8
     paragraphStyle.paragraphSpacing = 4
     return paragraphStyle
   }

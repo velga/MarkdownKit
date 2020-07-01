@@ -10,8 +10,8 @@
 		354E1AE7F8A6582615E761F5 /* Pods_Example_AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44808A771005F320A076CA59 /* Pods_Example_AppKit.framework */; };
 		3EB3627D23154D90005D48C8 /* MarkdownStrikethrough.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB3627C23154D90005D48C8 /* MarkdownStrikethrough.swift */; };
 		9826790723F2E53B0038F23D /* MarkdownStrikethrough.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB3627C23154D90005D48C8 /* MarkdownStrikethrough.swift */; };
-		98BA638C249B87520001FFE3 /* MarkdownOrderedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BA638B249B87520001FFE3 /* MarkdownOrderedList.swift */; };
-		98BA638D249B87520001FFE3 /* MarkdownOrderedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BA638B249B87520001FFE3 /* MarkdownOrderedList.swift */; };
+		98FFC65924ACCDE9009C0489 /* MarkdownOrderedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BA638B249B87520001FFE3 /* MarkdownOrderedList.swift */; };
+		98FFC65A24ACCDEA009C0489 /* MarkdownOrderedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BA638B249B87520001FFE3 /* MarkdownOrderedList.swift */; };
 		9E5A24F1B38B986D07AD63D1 /* Pods_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F52B0A5C8C127FBD3FEEC91A /* Pods_Example.framework */; };
 		B62C1BEB21EF7D8D00308C8C /* String+HTMLDecode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62C1BE221EF7D8C00308C8C /* String+HTMLDecode.swift */; };
 		B62C1BEC21EF7D8D00308C8C /* MarkdownSubreddit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62C1BE321EF7D8C00308C8C /* MarkdownSubreddit.swift */; };
@@ -877,7 +877,7 @@
 				B672002A21EF8A96008649E1 /* MarkdownCommonElement.swift in Sources */,
 				B672002E21EF8A96008649E1 /* MarkdownStyle.swift in Sources */,
 				B672002921EF8A96008649E1 /* MarkdownItalic.swift in Sources */,
-				98BA638C249B87520001FFE3 /* MarkdownOrderedList.swift in Sources */,
+				98FFC65A24ACCDEA009C0489 /* MarkdownOrderedList.swift in Sources */,
 				3EB3627D23154D90005D48C8 /* MarkdownStrikethrough.swift in Sources */,
 				B64AF62F220340D90048439D /* Typealias.swift in Sources */,
 				B672001C21EF8A96008649E1 /* String+UTF16.swift in Sources */,
@@ -910,7 +910,7 @@
 				B64AF61C220340360048439D /* MarkdownParser.swift in Sources */,
 				B64AF62C220340BC0048439D /* MarkdownLevelElement.swift in Sources */,
 				B64AF6282203408F0048439D /* MarkdownUnescaping.swift in Sources */,
-				98BA638D249B87520001FFE3 /* MarkdownOrderedList.swift in Sources */,
+				98FFC65924ACCDE9009C0489 /* MarkdownOrderedList.swift in Sources */,
 				9826790723F2E53B0038F23D /* MarkdownStrikethrough.swift in Sources */,
 				B64AF61E220340520048439D /* MarkdownQuote.swift in Sources */,
 				B64AF61D2203403A0048439D /* String+UTF16.swift in Sources */,
