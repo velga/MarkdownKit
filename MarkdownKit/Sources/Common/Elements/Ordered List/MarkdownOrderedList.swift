@@ -32,6 +32,7 @@ open class MarkdownOrderedList: MarkdownLevelElement {
   }
 
   open func formatText(_ attributedString: NSMutableAttributedString, range: NSRange, level: Int) {
+    var shouldReplaceNumber = false
     if lastString != attributedString.string {
         currentNumber = 1
         lastRange = nil
@@ -41,10 +42,14 @@ open class MarkdownOrderedList: MarkdownLevelElement {
         let inBetweenString = (attributedString.string as NSString).substring(with: previousRange.union(range))
         if inBetweenString.components(separatedBy: .newlines).count > 2 {
             currentNumber = 1
+        } else {
+            shouldReplaceNumber = true
         }
     }
 
-    attributedString.replaceCharacters(in: range, with: "\(currentNumber). ")
+    if shouldReplaceNumber {
+        attributedString.replaceCharacters(in: range, with: "\(currentNumber). ")
+    }
     attributedString.addAttributes([.paragraphStyle: defaultParagraphStyle(level: level)],
                                    range: range)
     currentNumber += 1
